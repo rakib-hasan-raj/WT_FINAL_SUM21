@@ -1,5 +1,5 @@
 <?php
-    include 'controllers/user.php';
+    require_once 'controllers/user.php';
 ?>
 
 <html>
@@ -11,14 +11,14 @@
             <table align="center">
                 <tr>
                     <td>
-                        <input type="text" name="username" value="<?php echo $uname; ?>" placeholder="Username">
+                        <input type="text" name="uname" value="<?php echo $uname; ?>" placeholder="Username">
                         <span><?php echo $err_uname; ?></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                    <input type="password" name="password" value="<?php echo $upass; ?>" placeholder="Password">
-                    <span><?php echo $err_upass; ?></span>
+                    <input type="password" name="pass" value="<?php echo $pass; ?>" placeholder="Password">
+                    <span><?php echo $err_pass; ?></span>
                     </td>
                 </tr>
                 <tr>

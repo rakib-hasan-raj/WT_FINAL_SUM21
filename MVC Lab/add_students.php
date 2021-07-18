@@ -1,6 +1,8 @@
 <?php
- include 'header.php';
- include 'controllers/studentctrl.php';
+ require_once 'header.php';
+ require_once 'controllers/StudentCtrl.php';
+ require_once 'controllers/DeptCtrl.php';
+ $departments=getAllDepartments();
 ?>
 
 <html>
@@ -32,10 +34,18 @@
               <td><span><?php echo $err_cgpa; ?></span></td>
 			</tr>
 			<tr>
-              <td>Department Id</td>
-              <td>: <input type="text" name="dept" value="<?php echo $dept;?>" placeholder="dept"></td>
-              <td><span><?php echo $err_dept; ?></span></td>
-			</tr>
+				    <td>Deparment:</td>
+					<td><select name="dept_id" value="<?php echo $dept_id; ?>">
+					<option selected disabled>Choose Deparment</option>
+					<?php
+					  foreach($departments as $d){
+						echo "<option value='".$d["id"]."'>".$d["name"]."</option>";
+					}
+					?>
+					</select>
+					</td>
+					<td><span> <?php echo $err_dept_id;?> </span></td>
+				</tr>
 			
 		<tr>	
         <td><input type="submit" name="add" value="Add"></td>
@@ -46,4 +56,4 @@
     </body>
 </html>
 
-<?php include 'footer.php'; ?>
+<?php require_once 'footer.php'; ?>
