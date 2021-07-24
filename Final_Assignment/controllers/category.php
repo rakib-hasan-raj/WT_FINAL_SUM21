@@ -30,7 +30,7 @@
         $cname=$_POST["cat"];
     }
     if(!$hasError){
-        $rs=updatecategory($cnmae,$id);
+        $rs=updatecategory($cnmae,$_POST["id"]);
         if ($rs===true){
             header("location: all_categories.php");
         }
