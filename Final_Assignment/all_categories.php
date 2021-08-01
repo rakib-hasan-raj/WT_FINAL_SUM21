@@ -6,6 +6,8 @@
 <html>
     <body>
         <fieldset>
+		<input type="text" placeholder="Search Category" onkeyup="search(this)">
+            <div id="searchCat"></div>
             <p align="middle"><font color="blue" size="5">All Category</font></p>
             <p align="middle">
 			<table>
@@ -41,6 +43,8 @@
 			</p>
         </fieldset>
     </body>
+	<script src="js/category.js">
+    </script>
 </html>
 
 <?php include 'footer.php'; ?>
